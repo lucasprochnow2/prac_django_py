@@ -1,7 +1,9 @@
+PORT=8000
+
 venv:
 	@echo "Activating venv..."
 	@source .venv/bin/activate
 
-runserver:
-	@echo "Running server..."
-	@.venv/bin/python manage.py runserver
+up:
+	@echo "Running server on ${PORT}..."
+	@.venv/bin/python manage.py runserver ${PORT}
